@@ -38,7 +38,6 @@ def run_part2():
     current = start
     numberOfZeroesCrossed = 0
     with open("input.txt", "r") as f:
-        i = 0
         for line in f:
             line_stripped = line.strip()
             direction = line_stripped[0:1]
@@ -52,9 +51,7 @@ def run_part2():
             
             if mult + current > 100:
                 # at 97, move 4 to the right, should be at 1
-                
                 current = ((mult + current) - 99)-1
-                print(str(i)+ " " + str(value) + 'up' + str(current))
                 numberOfZeroesCrossed = numberOfZeroesCrossed + 1
             elif mult + current < 0:
                 # at 2, move 4 to the left, should be at 98
@@ -62,20 +59,11 @@ def run_part2():
                 current = (99 + (mult + current))+1
                 if currentStart != 0:
                     numberOfZeroesCrossed = numberOfZeroesCrossed + 1
-                print(str(i) + " " + str(value) + 'down' + str(current))
             elif mult + current == 100 or mult + current == 0:
                 current = 0
                 numberOfZeroesCrossed = numberOfZeroesCrossed + 1
-                print(str(i) + " " + str(value) + 'eq' + str(current))
             else:
                 current = mult+current
-            
-            # print(current)
-
-            # if current == 0:
-            #     numberOfZeroesCrossed = numberOfZeroesCrossed + 1
-            #     print(str(i) + " " + str(value) + 'at')
-            i = i +1
         
     print(numberOfZeroesCrossed)
 
