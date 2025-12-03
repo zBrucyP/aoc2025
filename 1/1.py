@@ -16,7 +16,6 @@ def run_part1():
             mult = remainder * 1 if direction == "R" else remainder * -1
             
             if mult + current > 99:
-
                 # at 97, move 4 to the right, should be at 1
                 current = ((mult + current) - 99)-1
             elif mult + current < 0:
