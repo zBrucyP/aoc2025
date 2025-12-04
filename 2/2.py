@@ -1,4 +1,4 @@
-
+import time
 
 def is_valid_product(productId: str) -> bool:
     # you can find the invalid IDs by looking for any ID which is made only of some sequence of digits 
@@ -58,10 +58,10 @@ def run_part1():
         sum_of_invalids = sum(invalid_ranges)
         print(f"Sum of invalid product IDs: {sum_of_invalids}")
                 
-
-
+                
 if __name__ == "__main__":
+    start = time.time()
     run_part1()
-
+    print(f"Execution time: {time.time() - start} seconds")
 
     # 1227775554 too low
