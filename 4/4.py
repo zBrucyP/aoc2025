@@ -1,3 +1,4 @@
+import time
 
 def is_coordinate_accessible(paper_map: list[list[str]], i: int, j: int) -> bool:
     # extracted shared function for part 1 and 2
@@ -82,4 +83,7 @@ def run_v2():
         print(total_removed)
 
 if __name__ == "__main__":
+    start_time = time.time()
     run_v2()
+    end_time = time.time()
+    print(f"Execution time: {end_time - start_time} seconds")
