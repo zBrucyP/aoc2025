@@ -137,7 +137,8 @@ def run():
 
     print(f"Answer: {answer}")
 
-
+# this solution is bad and takes forever, but it worked in the end. 
+# run_2_2 is meant to be better, but I didnt get it working 
 def run_2():
     points = []
     with open("input.txt") as f:
